@@ -39,9 +39,9 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="text-align: center;">
     <% if (weather) { %>
-        <div class="weather-box">
+        <div class="weather-box" style="text-align: center;">
             <h2 class="subtitle"><%= weather.city %>, <%= weather.country %></h2>
             <div class="columns is-vcentered">
                 <div class="column is-one-third has-text-centered">
@@ -56,7 +56,7 @@
             </div>
         </div>
     <% } else {%>
-        <p class="error"> No Weather Found !</p>
+        <p class="error" style="text-align: center; color: "red";"> No Weather Found !</p>
     <%} %>
 </section>
 
