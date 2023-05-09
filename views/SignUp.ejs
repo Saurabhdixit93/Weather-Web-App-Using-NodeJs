@@ -1,0 +1,35 @@
+<title> <% PageTitle %> </title>
+
+<link rel="stylesheet" href="/assets/css_files/login-signup.css">
+
+<% if (message) { %>
+  <div class="popup-form" id="myForm">
+    <div class="popup-content">
+      <div class="close-button" onclick="closeForm()">&times;</div>
+      <h2> <%= message %></h2>
+    </div>
+  </div>
+<% } %>
+
+<div class="signup-form">
+    <h1>Sign Up</h1>
+    <form action="/user/create-account" method="post">
+      <div class="form-group">
+        <label for="name"><i class="fa fa-user"></i></label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="fa fa-envelope"></i></label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password"><i class="fa fa-lock"></i></label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+</div>

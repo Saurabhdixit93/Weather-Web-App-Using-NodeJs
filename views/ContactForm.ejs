@@ -1,0 +1,51 @@
+<title><%= PageTitle %></title>
+<link rel="stylesheet" href="/assets/css_files/contact.css"/>
+
+
+<% if (message) { %>
+<div class="popup-form" id="myForm">
+  <div class="popup-content">
+    <div class="close-button" onclick="closeForm()">&times;</div>
+    <h2><%= message %></h2>
+  </div>
+</div>
+<% } %>
+
+    
+<div class="container" style="margin-top: 45px;">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="section">
+          <h2 class="title is-2 has-text-centered">Get in Touch</h2>
+          <div class="has-text-centered">
+            <img src="https://img.icons8.com/fluency/100/null/old-vmware-logo.png" alt="Company Logo">
+          </div>
+          <form action="/form/submit-form" method="post" class="mt-5">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" name="name" placeholder="Enter your name" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="email" name="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea" name="message" placeholder="Enter your message" required></textarea>
+              </div>
+            </div>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-danger is-rounded is-outlined">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

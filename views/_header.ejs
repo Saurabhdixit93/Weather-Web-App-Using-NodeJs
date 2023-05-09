@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/assets/css_files/Header-Footer.css">
+<style>
+    #mainHeader.has-shadow {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #mainHeader{
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    #space{
+      margin-right: 5px;
+    }
+    .navbar.is-spaced a.navbar-item {
+      display: block;
+    }
+  </style>
+
+<header>
+    <nav class="navbar is-spaced is-fixed-top" id="mainHeader">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="https://img.icons8.com/ios-filled/150/null/old-vmware-logo.png" alt="logo">
+          </a>
+          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" id="space" href="/"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="navbar-item" id="space" href="/About"><i class="fa-solid fa-user"></i> About</a>
+            <a class="navbar-item" id="space" href="/contact-form"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <% if(locals.user){%>
+              <a class="navbar-item" id="space"><i class="fa-solid fa-user"></i><span style="margin-left: 3px;color: blueviolet;"><%= locals.user.name %></span> </a>
+              <a class=" button is-danger is-rounded is-outlined" href="/user/sign-out">
+                <span class="icon">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+                <span>
+                  Signout
+                </span>
+              </a>
+            <%}%>
+            <% if(!locals.user){%>
+              <a class="button is-success is-rounded is-outlined" href="/user/login-page" style="margin-right: 5px;">
+                <span>
+                  Login
+                </span>
+              </a>
+              <a class="button is-success is-rounded is-outlined" href="/user/signup-page">
+                <span>
+                  Signup
+                </span>
+              </a>
+            <%}%>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script src="/assets/script_files/script.js"></script>

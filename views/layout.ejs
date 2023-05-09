@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= PageTitle %> </title>
+    <script src="https://kit.fontawesome.com/d1ecb2e7fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <!-- local styles -->
+    <%- style %>
+    <link rel="stylesheet" href="/assets/css_files/style.css">
+</head>
+<body>
+
+    <!-- Web header part -->
+    <header>
+        <%- include('_header'); %>
+    </header>
+
+    <!-- web main Body part -->
+    <main id="main">
+        <%- body %>
+    </main>
+
+    <!-- Web footer part -->
+    <footer>
+        <%- include('_footer'); %>
+    </footer>
+    
+    <button id="back-to-top"><i class="fa fa-chevron-up"></i></button>
+
+   <!-- Preloader -->
+    <div class="preloader">
+        <div class="loading">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-text">
+            Loading...
+        </div>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        </div>
+    </div>
+    <!-- For Scripts -->
+    <%- script %>
+    <script src="/assets/script_files/layout.js"></script>
+   </body>
+</html>

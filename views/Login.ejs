@@ -1,0 +1,28 @@
+
+<title> <%= PageTitle %> </title>
+
+<link rel="stylesheet" href="/assets/css_files/login-signup.css">
+
+<% if (message) { %>
+  <div class="popup-form" id="myForm">
+    <div class="popup-content">
+      <div class="close-button" onclick="closeForm()">&times;</div>
+      <h2> <%= message %></h2>
+    </div>
+  </div>
+<% } %>
+
+<div class="login-form">
+    <h1>Login</h1>
+    <form method="post" action="/user/sign-in">
+      <div class="form-group">
+        <label for="email"><i class="fa fa-user"></i></label>
+        <input type="text" id="username" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+</div>

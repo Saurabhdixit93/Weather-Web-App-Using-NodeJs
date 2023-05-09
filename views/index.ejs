@@ -1,0 +1,65 @@
+<title><%= PageTitle %></title>
+<link rel="stylesheet" href="/assets/css_files/filePage.css" />
+
+<% if (message) { %>
+<div class="popup-form" id="myForm">
+  <div class="popup-content">
+    <div class="close-button" onclick="closeForm()">&times;</div>
+    <h2><%= message %></h2>
+  </div>
+</div>
+<% } %>
+
+<section class="hero is-primary" style="margin-top: 20px">
+  <div class="hero-body">
+    <div class="container"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form action="/new/get-weather" method="post">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" name="location" placeholder="Enter A Valid Location.." required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <button
+            type="submit"
+            class="button is-primary is-rounded is-fullwidth">
+            Get Weather
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+    <% if (weather) { %>
+        <div class="weather-box">
+            <h2 class="subtitle"><%= weather.city %>, <%= weather.country %></h2>
+            <div class="columns is-vcentered">
+                <div class="column is-one-third has-text-centered">
+                    <figure class="image is-128x128">
+                        <img src="https://openweathermap.org/img/wn/<%= weather.icon %>.png">
+                    </figure>
+                </div>
+                <div class="column">
+                    <p class="title"><%= weather.temperature %>°C</p>
+                    <p class="subtitle"><%= weather.description %></p>
+                </div>
+            </div>
+        </div>
+    <% } else {%>
+        <p class="error"> No Weather Found !</p>
+    <%} %>
+</section>
+
+
+<script src="/assets/script_files/file.js"></script>
+

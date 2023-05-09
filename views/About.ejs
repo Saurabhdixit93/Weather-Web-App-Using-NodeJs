@@ -1,0 +1,39 @@
+<title><%= PageTitle %></title>
+<link rel="stylesheet" href="/assets/css_files/About.css"/>
+
+
+<% if (message) { %>
+<div class="popup-form" id="myForm">
+  <div class="popup-content">
+    <div class="close-button" onclick="closeForm()">&times;</div>
+    <h2><%= message %></h2>
+  </div>
+</div>
+<% } %>
+
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">About Us</h1>
+        <h2 class="subtitle">We are a creative web design agency</h2>
+      </div>
+    </div>
+</section>
+<div class="container" style="margin-bottom: 20px;font-size: 13px;">
+    <div class="columns" style="margin-top: -5rem;">
+      <div class="column is-half">
+        <div class="image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz3FXhD-3-p733odHKZbkVg3OPdgglDP39DQ&usqp=CAU" alt="Company Image">
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in metus vel velit viverra dapibus. Nam consequat auctor tortor, a bibendum magna rutrum a. Integer eu orci placerat, euismod sapien et, mollis elit. In nec lectus ipsum. Proin non mauris vel leo aliquet tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ac neque non sapien volutpat varius. Fusce ac augue nec diam euismod finibus. Nunc vel ipsum id nulla facilisis mollis. Fusce vel fringilla velit. Nulla facilisi. Fusce eget est at libero posuere viverra. Nam semper rutrum augue eu rhoncus. </p>
+          <p>Mauris dictum scelerisque metus, sit amet faucibus mauris volutpat a.</p>
+          <p>Phasellus posuere ligula sed enim tristique fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam laoreet ex nec risus gravida, eu semper eros iaculis. Integer semper felis nulla, nec blandit mi efficitur eget. Duis nec congue arcu. Nullam eget nisl eu velit feugiat bibendum. Aenean sit amet velit id turpis consectetur consectetur. </p>
+          <p>Quisque a nibh non dui aliquam tristique in sed metus. Aenean porttitor mauris auctor erat bibendum varius. Nam vestibulum mauris a lorem malesuada, eu rhoncus nulla varius. Nunc lacinia, nunc vel tristique posuere, ex lectus aliquam tellus, nec varius enim odio in dui. Sed feugiat sagittis fringilla. Sed sagittis convallis arcu, eu dictum lacus dapibus sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec lacinia, nibh vitae pharetra feugiat, nibh arcu vehicula enim, vel congue sapien turpis at velit. </p>
+        </div>
+      </div>
+    </div>
+</div>
