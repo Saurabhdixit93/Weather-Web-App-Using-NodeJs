@@ -20,7 +20,7 @@ module.exports.getWeather = async (req ,res) => {
                         description: weatherData.weather[0].description,
                         icon: weatherData.weather[0].icon,
                     };
-                    return res.render('index', { weather, message: 'Weathe Send Successfully' , PageTitle: 'Home Page |  Weather App', });
+                    return res.render('index', { weather, message: 'Weather Showing Bolow Successfully' , PageTitle: 'Home Page |  Weather App', });
                 }
             }
         });
