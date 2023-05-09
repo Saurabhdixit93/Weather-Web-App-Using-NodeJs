@@ -41,16 +41,16 @@ app.use(session({
     resave: false,
     cookie:{
         maxAge:(1000 * 60 * 100)
-    },
+    }
     // mongostore connection where to store the session cookies
-    store: MongoStore.create(  // Mongo store is used to store session cookie in the DATABASE
-        { 
-            mongoUrl : process.env.MONGO_URL,
-            autoRemove: 'disabled'//I dont want to remove session cookies automatically
-        }, function(err){
-        if(err){console.log('Error while trying to establish the connection and store session cookie:', err); return;}
-        console.log('connect-mongo setup okay'); return;
-    })
+    // store: MongoStore.create(  // Mongo store is used to store session cookie in the DATABASE
+    //     { 
+    //         mongoUrl : process.env.MONGO_URL,
+    //         autoRemove: 'disabled'//I dont want to remove session cookies automatically
+    //     }, function(err){
+    //     if(err){console.log('Error while trying to establish the connection and store session cookie:', err); return;}
+    //     console.log('connect-mongo setup okay'); return;
+    // })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
