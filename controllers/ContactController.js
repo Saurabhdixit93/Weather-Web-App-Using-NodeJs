@@ -4,14 +4,17 @@ const fs = require('fs');
 const ejs = require('ejs');
 const successEmail = fs.readFileSync('./views/FormSubmition/ContactSuccess.ejs','utf-8');
 
+// Transporter
 const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    auth: {
-        user: 'stevie.kihn@ethereal.email',
-        pass: '8E1tuCPndZGVnuVuz2'
-    }
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT, 
+  auth: {
+    user:process.env.SMTP_USER_EMAIL,
+    pass:process.env.SMTP_USER_PASSWORD
+  },
+  secure: process.env.SECURE_SMTP,
 });
+
 
 module.exports.sendForm = async (req , res) => {
     try{
